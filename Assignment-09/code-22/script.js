@@ -1,11 +1,9 @@
 // Write a js program to find all factors of a number.
 function factor(num) {
-    const factors = []; // Array to hold the factors
-
-    // Loop through all numbers from 1 to num
+    const factors = [];
     for (let i = 1; i <= num; i++) {
-        if (num % i === 0) { // Check if i is a factor of num
-            factors.push(i); // Add i to the factors array
+        if (num % i === 0) {
+            factors.push(i);
         }
     }
 

@@ -1,13 +1,13 @@
 // Write a js program to calculate factorial of a number.
 function factorial(num) {
     if (num < 0) return "Factorial is not defined for negative numbers.";
-    let result = 1; // Initialize result to 1
+    let result = 1;
 
     for (let i = 1; i <= num; i++) {
-        result *= i; // Multiply result by i
+        result *= i;
     }
 
-    return result; // Return the final result
+    return result;
 }
 function factorialIterative(){
     const userInput =document.getElementById("input").value;

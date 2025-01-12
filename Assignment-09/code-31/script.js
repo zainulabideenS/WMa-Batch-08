@@ -16,11 +16,10 @@ function printArmstrongNumbersUpTo(n) {
     console.log(`Armstrong numbers between 1 and ${n}:`);
     for (let i = 1; i <= n; i++) {
         if (isArmstrongNumber(i)) {
-            console.log(i); // Print the Armstrong number
+            console.log(i); 
         }
     }
 }
 
-// Example usage:
 const n = prompt("Enter a number to print all Armstrong numbers up to that number:");
 printArmstrongNumbersUpTo(Number(n));

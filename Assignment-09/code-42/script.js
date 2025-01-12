@@ -3,7 +3,6 @@ function octalToDecimal(octal) {
     let decimal = 0;
     const octalString = octal.toString();
 
-    // Convert octal to decimal
     for (let i = 0; i < octalString.length; i++) {
         decimal += parseInt(octalString[i]) * Math.pow(8, octalString.length - 1 - i);
     }
@@ -14,22 +13,20 @@ function octalToDecimal(octal) {
 function decimalToBinary(decimal) {
     let binary = '';
 
-    // Convert decimal to binary
     while (decimal > 0) {
-        binary = (decimal % 2) + binary; // Get the remainder and prepend it to the binary string
-        decimal = Math.floor(decimal / 2); // Divide the decimal number by 2
+        binary = (decimal % 2) + binary;
+        decimal = Math.floor(decimal / 2); 
     }
 
-    return binary || '0'; // Return '0' if the binary string is empty
+    return binary || '0'; 
 }
 
 function octalToBinary(octal) {
-    const decimal = octalToDecimal(octal); // Convert octal to decimal
-    const binary = decimalToBinary(decimal); // Convert decimal to binary
+    const decimal = octalToDecimal(octal); 
+    const binary = decimalToBinary(decimal); 
     return binary;
 }
 
-// Example usage:
 const octalNumber = prompt("Enter an octal number:");
 try {
     const result = octalToBinary(octalNumber);

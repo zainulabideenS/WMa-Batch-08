@@ -1,12 +1,12 @@
 // Write a js program to find power of a number using for loop
 function power(base, exponent) {
-    let result = 1; // Initialize result to 1
+    let result = 1;
 
     for (let i = 0; i < exponent; i++) {
         result *= base; // Multiply result by base in each iteration
     }
 
-    return result; // Return the final result
+    return result;
 }
 
 function convert(){

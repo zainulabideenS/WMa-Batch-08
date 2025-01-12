@@ -6,7 +6,6 @@ function printAsciiTable() {
     console.log("-----------------------");
 
     for (let i = 0; i <= 127; i++) {
-        // Convert the ASCII value to its corresponding character
         const char = String.fromCharCode(i);
         console.log(`${i}\t${char}`);
     }

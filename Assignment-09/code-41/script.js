@@ -3,7 +3,6 @@ function binaryToDecimal(binary) {
     let decimal = 0;
     const binaryString = binary.toString();
 
-    // Convert binary to decimal
     for (let i = 0; i < binaryString.length; i++) {
         decimal += parseInt(binaryString[i]) * Math.pow(2, binaryString.length - 1 - i);
     }
@@ -14,28 +13,25 @@ function binaryToDecimal(binary) {
 function decimalToHexadecimal(decimal) {
     let hexadecimal = '';
 
-    // Convert decimal to hexadecimal
     while (decimal > 0) {
         const remainder = decimal % 16;
-        // Convert remainder to hexadecimal character
         if (remainder < 10) {
-            hexadecimal = remainder.toString() + hexadecimal; // For 0-9
+            hexadecimal = remainder.toString() + hexadecimal; 
         } else {
-            hexadecimal = String.fromCharCode(remainder - 10 + 'A'.charCodeAt(0)) + hexadecimal; // For A-F
+            hexadecimal = String.fromCharCode(remainder - 10 + 'A'.charCodeAt(0)) + hexadecimal; 
         }
-        decimal = Math.floor(decimal / 16); // Divide the decimal number by 16
+        decimal = Math.floor(decimal / 16);
     }
 
-    return hexadecimal || '0'; // Return '0' if the hexadecimal string is empty
+    return hexadecimal || '0'; 
 }
 
 function binaryToHexadecimal(binary) {
-    const decimal = binaryToDecimal(binary); // Convert binary to decimal
-    const hexadecimal = decimalToHexadecimal(decimal); // Convert decimal to hexadecimal
+    const decimal = binaryToDecimal(binary);
+    const hexadecimal = decimalToHexadecimal(decimal);
     return hexadecimal;
 }
 
-// Example usage:
 const binaryNumber = prompt("Enter a binary number:");
 try {
     const result = binaryToHexadecimal(binaryNumber);

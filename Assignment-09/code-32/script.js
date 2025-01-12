@@ -1,24 +1,20 @@
 // Write a js program to check whether a number is Perfect number or not.
 function isPerfectNumber(num) {
     if (num <= 1) {
-        return false; // 0 and 1 are not perfect numbers
+        return false;
     }
 
     let sum = 0;
-
-    // Find all divisors and sum them
     for (let i = 1; i <= num / 2; i++) {
         if (num % i === 0) {
-            sum += i; // Add the divisor to the sum
+            sum += i; 
         }
     }
 
-    // Check if the sum of divisors equals the original number
     return sum === num;
 }
 
-// Example usage:
-const number = prompt("Enter a number to check if it's a perfect number:");
+const number = prompt("Enter a number to check if it is aperfect number:");
 const result = isPerfectNumber(Number(number));
 
 if (result) {

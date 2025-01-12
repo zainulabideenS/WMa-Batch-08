@@ -3,7 +3,6 @@ function binaryToDecimal(binary) {
     let decimal = 0;
     const binaryString = binary.toString();
 
-    // Convert binary to decimal
     for (let i = 0; i < binaryString.length; i++) {
         decimal += parseInt(binaryString[i]) * Math.pow(2, binaryString.length - 1 - i);
     }
@@ -11,7 +10,6 @@ function binaryToDecimal(binary) {
     return decimal;
 }
 
-// Example usage:
 const binaryNumber = prompt("Enter a binary number:");
 try {
     const result = binaryToDecimal(binaryNumber);

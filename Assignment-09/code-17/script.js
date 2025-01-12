@@ -6,7 +6,7 @@ function isPalindrome(num) {
     return numStr === reversedStr;
 }
 
-// Function to handle button click
+// button click
 function checkPalindrome() {
     const userInput = document.getElementById('input').value;
     if (userInput.trim() !== '') {

@@ -1,5 +1,4 @@
 // Write a js program to enter a number and print its reverse.
-// Function to reverse a number
 function reverseNumber(num) {
     let reversed = ''; // 
     for (let i = num.length - 1; i >= 0; i--) {

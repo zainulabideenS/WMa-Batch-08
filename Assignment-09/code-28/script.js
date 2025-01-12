@@ -1,21 +1,21 @@
 // Write a js program to find sum of all prime numbers between 1 to n
 function isPrime(num) {
     if (num <= 1) {
-        return false; // 0 and 1 are not prime numbers
+        return false; 
     }
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) {
-            return false; // Found a factor, so it's not prime
+            return false;
         }
     }
-    return true; // No factors found, so it's prime
+    return true;
 }
 
 function sumOfPrimesUpTo(n) {
     let sum = 0;
     for (let i = 2; i <= n; i++) {
         if (isPrime(i)) {
-            sum += i; // Add the prime number to the sum
+            sum += i;
         }
     }
     return sum;
